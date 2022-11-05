@@ -10,15 +10,25 @@
 </head>
 
 <body>
-    <header>
-        <h1>Dmitrii's Library</h1>
-    </header>
-    <main>
-        <h2>My books</h2>
-        <div class="cards"></div>
-        <button class="add-btn">Add new book</button>
-    </main>
-    <footer></footer>
+    <div class="container">
+        <header>
+            <h1>Dmitrii's Library</h1>
+        </header>
+        <main>
+            <h2>My books</h2>
+            <div class="cards"></div>
+            <button class="add-btn">Add new book</button>
+        </main>
+        <footer>
+            <p class="copyright">
+                Copyright ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <a href="http://https://github.com/Dmitry-174">Dmitrii Valiev</a>
+            </p>
+        </footer>
+    </div>
 
     <form class="add-book-form" action="#">
         <p>Add new book</p>

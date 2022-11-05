@@ -9,20 +9,18 @@
     font-family: "Montserrat";
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: auto;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 
 header {
     background-color: #0ea5e9;
-    height: 3rem;
+    min-height: 5rem;
     display: flex;
-    padding: 1rem;
+    padding: 0 1rem;
     justify-content: start;
     align-items: center;
 }
@@ -37,6 +35,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #FFFFFF;
+    flex: 1;
 }
 
 .cards {
@@ -185,4 +184,21 @@ main {
 
 .read-btn {
     background-color: #64748b;
+}
+
+footer {
+    background-color: #64748b;
+    display: flex;
+    min-height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
