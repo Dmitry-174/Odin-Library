@@ -16,8 +16,26 @@
     <main>
         <h2>My books</h2>
         <div class="cards"></div>
+        <button class="add-btn">Add new book</button>
     </main>
     <footer></footer>
+
+    <form class="add-book-form" action="#">
+        <p>Add new book</p>
+        <label for="title">Title:</label>
+        <input type="text" placeholder="The Hobbit" id="title">
+        <label for="author">Author:</label>
+        <input type="text" placeholder="J.R.R. Tolkien" id="author">
+        <label for="pages">Pages:</label>
+        <input type="number" placeholder="295" id="pages">
+        <div class="checkbox">
+            <label for="read">Have you read it?</label>
+            <input type="checkbox" name="read" id="read">
+        </div>
+        <button type="submit">Add book</button>
+    </form>
+
+    <div class="overlay"></div>
 
     <script src="script.js"></script>
 </body>
