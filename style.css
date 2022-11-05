@@ -36,24 +36,30 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f0eef1;
 }
 
 .cards {
     padding: 1rem 0;
-    display: flex;
+    display: grid;
     gap: 1rem;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    width: 100%;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 170px;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
 }
 
 .title {
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
 }
 
 .description {
@@ -143,5 +149,29 @@ main {
     align-self: center;
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.required-msg {
+    display: none;
+}
+
+.required-msg.active {
+    display: block;
+    color: #ff0000;
+    font-size: 0.75rem;
+    font-weight: 300;
+    align-self: start;
+}
+
+.remove-btn {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-style: none;
+    background-color: #ef4444;
+    color: #FFFFFF;
     font-weight: 600;
 }

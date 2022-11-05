@@ -23,15 +23,16 @@
     <form class="add-book-form" action="#">
         <p>Add new book</p>
         <label for="title">Title:</label>
-        <input type="text" placeholder="The Hobbit" id="title">
+        <input type="text" placeholder="The Hobbit" id="title" required>
         <label for="author">Author:</label>
-        <input type="text" placeholder="J.R.R. Tolkien" id="author">
+        <input type="text" placeholder="J.R.R. Tolkien" id="author" required>
         <label for="pages">Pages:</label>
-        <input type="number" placeholder="295" id="pages">
+        <input type="number" placeholder="295" id="pages" required>
         <div class="checkbox">
             <label for="read">Have you read it?</label>
             <input type="checkbox" name="read" id="read">
         </div>
+        <p class="required-msg">All fields are required</p>
         <button id="add-submit-btn" type="submit">Add book</button>
     </form>
 
