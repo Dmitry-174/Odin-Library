@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(Fonts/Montserrat-VariableFont_wght.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+header {
+    background-color: #0ea5e9;
+    height: 3rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: start;
+    align-items: center;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    padding: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 170px;
+}
+
+.title {
+    padding-bottom: 0.25rem;
+}
+
+.description {
+    list-style-type: none;
+}
+
+
+.description li {
+    padding-bottom: 0.25rem;
+}
