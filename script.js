@@ -14,9 +14,10 @@ Book.prototype.info = function () {
         (this.read ? 'have read' : 'not read yet');
 }
 
-function addBookToLibrary() {
-    // do stuff here
+function addBookToLibrary(title, author, pages, read) {
+    let newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
 }
 
-let theHobbit = new Book('The Hobbit', "J.R.R. Tolkien", 295, false);
-console.log(theHobbit.info());
+addBookToLibrary('The Hobbit', "J.R.R. Tolkien", 295, false);
+console.log(myLibrary);
