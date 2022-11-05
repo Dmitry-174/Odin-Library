@@ -41,6 +41,16 @@ function createBookCard(book) {
     let read = document.createElement('li');
     read.classList.add('read');
     read.textContent = book.read ? 'have read' : 'not read yet';
+    
+    let readBtn = document.createElement('button');
+    readBtn.classList.add('read-btn');
+    if (book.read) {
+        card.classList.add('have-read');
+        readBtn.textContent = 'Mark as unread';
+    } else {
+        readBtn.textContent = 'Mark as read';
+    }
+
 
     let removeBtn = document.createElement('button');
     removeBtn.classList.add('remove-btn');
@@ -52,6 +62,7 @@ function createBookCard(book) {
 
     card.appendChild(title);
     card.appendChild(description);
+    card.appendChild(readBtn);
     card.appendChild(removeBtn);
     return card
 }
@@ -118,7 +129,16 @@ cards.addEventListener('click', (e) => {
     if (!e.target.classList.contains('remove-btn')) {
         return
     }
-    let index = e.target.dataset.index;
+    let index = e.target.parentNode.dataset.index;
     myLibrary.splice(index, 1);
+    showBooks(myLibrary);
+})
+
+cards.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('read-btn')) {
+        return
+    }
+    let index = e.target.parentNode.dataset.index;
+    myLibrary[index].read = !myLibrary[index].read;
     showBooks(myLibrary);
 })
