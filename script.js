@@ -81,6 +81,7 @@ let addBookForm = document.querySelector('.add-book-form');
 let overlay = document.querySelector('.overlay');
 let addBtn = document.querySelector('.add-btn');
 let requiredMsg = document.querySelector('.required-msg');
+let cards = document.querySelector(".cards");
 
 addBtn.addEventListener("click", (e) => {
     addBookForm.classList.add("active");
@@ -111,5 +112,13 @@ addSubmitBtn.addEventListener('click', (e) => {
     addBookForm.classList.remove("active");
     overlay.classList.remove("active");
     showBooks(myLibrary);
+})
 
+cards.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('remove-btn')) {
+        return
+    }
+    let index = e.target.dataset.index;
+    myLibrary.splice(index, 1);
+    showBooks(myLibrary);
 })
