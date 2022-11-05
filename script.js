@@ -85,7 +85,6 @@ function capitalizeFirstLetter(sting) {
 }
 
 addBookToLibrary('The Hobbit', "J.R.R. Tolkien", 295, false);
-addBookToLibrary('The Test', "T. Test", 25, true);
 showBooks(myLibrary);
 
 let addBookForm = document.querySelector('.add-book-form');
