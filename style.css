@@ -202,3 +202,7 @@ a {
     text-decoration: none;
     color: #FFFFFF;
 }
+
+button:hover {
+    transform: scale(1.05);
+}
